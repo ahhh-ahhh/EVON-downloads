@@ -21,7 +21,7 @@
       "checkcaller": {
           "label": "checkcaller();",
           "type": "Method",
-          "description": "Returns true if the current thread is a Oxygen U thread.\nNote: Checkcaller does NOT check the call stack of the function, if you call a game function then it calls out to checkcaller, the result will be true! Be careful.",
+          "description": "Returns true if the current thread is a EBON thread.\nNote: Checkcaller does NOT check the call stack of the function, if you call a game function then it calls out to checkcaller, the result will be true! Be careful.",
           "insert": "checkcaller"
       },
       "queue_on_teleport": {
@@ -30,12 +30,7 @@
           "description": "Executes code after player is teleported.",
           "insert": "queue_on_teleport"
       },
-      "setsimulationradius": {
-          "label": "checkcaller();",
-          "type": "Method",
-          "description": "Returns true if the current thread is a Oxygen U thread.\nNote: Checkcaller does NOT check the call stack of the function, if you call a game function then it calls out to checkcaller, the result will be true! Be careful.",
-          "insert": "checkcaller"
-      },
+    
       "gethwid": {
           "label": "gethwid();",
           "type": "Method",
@@ -249,7 +244,7 @@
       "getgenv": {
           "label": "getgenv();",
           "type": "Method",
-          "description": "Returns the environment that will be applied to each script ran by Oxygen U.",
+          "description": "Returns the environment that will be applied to each script ran by EVON.",
           "insert": "getgenv"
       },
       "rconsoleprint": {
@@ -312,11 +307,11 @@
           "description": "Returns the functions connected to event as a table.\nEach entry in the returned table is a table with Enable and Disable methods.\nYou can call those methods to enable/disable connections.",
           "insert": "getconnections"
       },
-      "is_oxygen_function": {
-          "label": "is_oxygen_function(f);",
+      "is_evon_function": {
+          "label": "is_evon_function(f);",
           "type": "Method",
-          "description": "returns true if f is a Oxygen U function.",
-          "insert": "is_oxygen_function"
+          "description": "returns true if f is a evon U function.",
+          "insert": "is_evon_function"
       },
       "setreadonly": {
           "label": "setreadonly(t, b);",
