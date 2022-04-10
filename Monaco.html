@@ -2235,6 +2235,8 @@
 		var editor;
 		var Proposals = [];
 
+    var enableAntiSkid;
+    var disableAntiSkid;
 		var SetText;
 		var ShowMinimap;
 		var HideMinimap;
@@ -2343,7 +2345,7 @@
 			window.onresize = function () {
 				editor.layout();
 			};
-
+   
 			ShowMinimap = function () {
 				editor.updateOptions({
 					minimap: {
@@ -2360,8 +2362,27 @@
 				});
 			}
 
-
-
+      function handleover()
+      {
+        document.body.style.filter = "blur(0px)"
+      }
+      function handleleave()
+      {
+        document.body.style.filter = "blur(5px)"
+      }
+      enableAntiSkid= function()
+      {
+        document.body.style.filter = "blur(5px)";
+        document.body.addEventListener("mouseover",handleover);
+        document.body.addEventListener("mouseleave",handleleave);
+      }
+      disableAntiSkid = function()
+      {
+        document.body.style.filter = "blur(0px)";
+        document.body.removeEventListener("mouseover",handleover,false);
+        document.body.removeEventListener("mouseleave",handleleave,false);
+        
+      }
 			editor.onDidChangeModelContent(function (e) {
 				try{
 				this.luaparse.parse(editor.getValue());
